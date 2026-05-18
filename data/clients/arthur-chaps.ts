@@ -198,6 +198,20 @@ const arthurChapsPressKit: PressKitConfig = {
           "Cultures urbaines",
         ],
       },
+      {
+        title: "Marques & collaborations",
+        icon: "globe",
+        items: [
+          "Hermès",
+          "Louis Vuitton",
+          "Dior",
+          "Deezer",
+          "Warner Music",
+          "Warner Chappell",
+          "Rothchild",
+          "Lacoste",
+        ],
+      },
     ],
   },
   sound: {
@@ -300,15 +314,6 @@ const arthurChapsPressKit: PressKitConfig = {
         href: "https://www.instagram.com/fonfon_soundsystem/",
       },
     ],
-    fit: {
-      eyebrow: "Marques & collaborations",
-      title: "Formats culturels,\nactivations et direction artistique.",
-      points: [
-        "Arthur Chaps accompagne les marques, lieux et médias qui veulent créer des expériences musicales crédibles, ancrées dans la culture club.",
-        "Son approche relie programmation, direction artistique, DJ sets et production de formats sur mesure pour des publics exigeants.",
-        "Un profil adapté aux lancements, événements lifestyle, activations culturelles, collaborations éditoriales et projets entre Europe et Afrique.",
-      ],
-    },
   },
   rider: {
     eyebrow: "Rider",
