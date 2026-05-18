@@ -47,7 +47,34 @@ export function BrandsSection({ brands }: BrandsSectionProps) {
           ))}
         </div>
 
-        <div className={`mt-5 grid items-stretch gap-3 md:mt-8 md:gap-4 ${brands.fit ? "xl:grid-cols-[1.15fr_0.85fr]" : ""}`}>
+        {brands.fit && (
+          <div className="mt-7 rounded-[1.2rem] border border-[rgb(var(--pk-accent-rgb)/0.35)] bg-[linear-gradient(135deg,rgb(var(--pk-accent-rgb)/0.18)_0%,rgba(255,255,255,0.035)_42%,rgba(255,255,255,0.02)_100%)] p-5 shadow-[0_0_42px_rgb(var(--pk-accent-rgb)/0.12)] backdrop-blur-sm md:mt-10 md:rounded-[1.4rem] md:p-7">
+            <div className="grid gap-5 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+              <div>
+                <div className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pk-accent-soft)] md:text-xs md:tracking-[0.34em]">
+                  {brands.fit.eyebrow}
+                </div>
+
+                <h3 className="mt-4 whitespace-pre-line text-xl font-black uppercase leading-[1.12] md:mt-5 md:text-3xl">
+                  {brands.fit.title}
+                </h3>
+              </div>
+
+              <div className="grid gap-3 text-sm leading-6 text-white/70 md:grid-cols-3 md:gap-4 md:leading-6">
+                {brands.fit.points.map((point) => (
+                  <p
+                    key={point}
+                    className="rounded-lg border border-white/10 bg-black/20 p-4"
+                  >
+                    {point}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        <div className="mt-5 grid items-stretch gap-3 md:mt-8 md:gap-4">
           <div className="grid grid-cols-3 gap-2.5 md:gap-4">
             {brands.items.map((brand) => {
               const item = typeof brand === "string" ? { name: brand } : brand;
@@ -81,26 +108,6 @@ export function BrandsSection({ brands }: BrandsSectionProps) {
               );
             })}
           </div>
-
-          {brands.fit && (
-            <div className="self-start rounded-lg border border-white/10 bg-[linear-gradient(180deg,rgb(var(--pk-accent-rgb)/0.08)_0%,rgba(255,255,255,0.02)_100%)] p-4 backdrop-blur-sm md:rounded-[1.4rem] md:p-6">
-              <div>
-                <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[var(--pk-accent-soft)] md:text-xs md:tracking-[0.34em]">
-                  {brands.fit.eyebrow}
-                </div>
-
-                <h3 className="mt-3 text-base font-black uppercase leading-[1.15] md:mt-5 md:text-2xl">
-                  {brands.fit.title}
-                </h3>
-
-                <div className="mt-3 grid gap-2 text-sm leading-5 text-white/60 sm:grid-cols-3 md:mt-5 md:block md:space-y-4 md:leading-6">
-                  {brands.fit.points.map((point) => (
-                    <p key={point}>{point}</p>
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </section>
