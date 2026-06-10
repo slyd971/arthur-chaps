@@ -279,17 +279,12 @@ const arthurChapsPressKit: PressKitConfig = {
         poster: "/arthur-chaps/videos/ArthurChaps_Video_Live_SOCIAL_05-poster.jpg",
       },
     ],
-    cta: {
-      label: "Voir toutes les vidéos",
-      href: "/videos?client=arthur-chaps",
-    },
   },
   spotify: {
     eyebrow: "Spotify",
     title: "Sorties & projets.",
     description:
       "Sur Spotify, les sorties d'Arthur Chaps prolongent son rapport au club: des morceaux directs, des collaborations choisies et une écriture musicale nourrie par la house, les musiques électroniques et les cultures afro-diasporiques.",
-    useThemeColor: true,
     playlists: [
       {
         id: "arthur-chaps-spotify",
