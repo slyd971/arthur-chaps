@@ -496,6 +496,7 @@ export const arthurChapsClient: ClientConfig = {
       "press kit DJ",
     ],
     ogImage: "/opengraph-image",
+    favicon: "/arthur-chaps/favicon/favicon.ico",
   },
   defaultTheme: "blue",
   defaultVariant: "impact",
